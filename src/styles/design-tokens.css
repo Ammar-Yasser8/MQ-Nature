@@ -1,0 +1,87 @@
+/* design-tokens.css */
+:root {
+  /* Colors */
+  --color-primary: #111111; /* Apple/Vercel style stark black */
+  --color-primary-hover: #333333;
+  --color-accent: #16a85f; /* Keeping the MQ Nature green */
+  --color-accent-hover: #0f7c45;
+  --color-accent-light: rgba(22, 168, 95, 0.1);
+  --color-blue: #2f347f; /* MQ Nature blue */
+  --color-blue-dark: #20255f;
+  
+  --color-background: #fafafc; /* Slightly cool off-white for premium feel */
+  --color-bg-gradient: radial-gradient(circle at 15% 50%, rgba(22, 168, 95, 0.04), transparent 30%), 
+                       radial-gradient(circle at 85% 30%, rgba(47, 52, 127, 0.04), transparent 30%);
+  --color-surface: #ffffff;
+  --color-surface-hover: #f9fafa;
+  --color-surface-glass: rgba(255, 255, 255, 0.75);
+  
+  --color-text-main: #0f1115; /* Deeper, richer black */
+  --color-text-muted: #5e6470;
+  --color-text-inverse: #ffffff;
+
+  --color-border: rgba(0, 0, 0, 0.06);
+  --color-border-hover: rgba(0, 0, 0, 0.12);
+
+  /* Typography */
+  --font-family-en: "Inter", "Space Grotesk", sans-serif;
+  --font-family-ar: "Cairo", "IBM Plex Sans Arabic", sans-serif;
+  --font-family-base: var(--font-family-en); /* Default, controlled by data-lang */
+
+  /* Spacing */
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+  --spacing-24: 6rem;
+  --spacing-32: 8rem;
+
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-full: 9999px;
+
+  /* Shadows - Extremely soft, inspired by Vercel/Linear */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.02), 0 1px 3px rgba(0, 0, 0, 0.03);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.03), 0 2px 4px rgba(0, 0, 0, 0.02);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.04), 0 4px 12px rgba(0, 0, 0, 0.02);
+  --shadow-glass: 0 8px 32px rgba(31, 38, 135, 0.04);
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Layout */
+  --max-width: 1200px;
+  --header-height: 72px;
+}
+
+[dir="rtl"] {
+  --font-family-base: var(--font-family-ar);
+}
+
+[data-theme='dark'] {
+  --color-background: #0b0f19; /* Deep premium blue-black */
+  --color-bg-gradient: radial-gradient(circle at 15% 50%, rgba(22, 168, 95, 0.08), transparent 30%), 
+                       radial-gradient(circle at 85% 30%, rgba(47, 52, 127, 0.1), transparent 30%);
+  --color-surface: #151b2b;
+  --color-surface-hover: #1b2336;
+  --color-surface-glass: rgba(21, 27, 43, 0.75);
+  
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-hover: rgba(255, 255, 255, 0.15);
+  
+  --color-text-main: #f3f4f6;
+  --color-text-muted: #9ca3af;
+  --color-accent-light: rgba(22, 168, 95, 0.15);
+}
+

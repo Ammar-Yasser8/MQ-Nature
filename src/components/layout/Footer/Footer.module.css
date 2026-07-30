@@ -1,0 +1,91 @@
+.footer {
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--spacing-16);
+}
+
+.footerContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-10);
+  margin-bottom: var(--spacing-16);
+}
+
+@media (min-width: 768px) {
+  .footerContainer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.brandInfo {
+  max-width: 320px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  font-weight: 800;
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-4);
+}
+
+.logoImg {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+}
+
+.desc {
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+@media (min-width: 768px) {
+  .links {
+    flex-direction: row;
+    gap: var(--spacing-8);
+  }
+}
+
+.link {
+  color: var(--color-text-muted);
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.link:hover {
+  color: var(--color-text-main);
+}
+
+.facebookFooterLink {
+  color: #1877F2;
+  font-weight: 600;
+  transition: opacity var(--transition-fast);
+}
+
+.whatsappFooterLink {
+  color: #25D366;
+  font-weight: 600;
+  transition: opacity var(--transition-fast);
+}
+
+.facebookFooterLink:hover {
+  opacity: 0.8;
+}
+
+.bottomBar {
+  padding: var(--spacing-6) 0;
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+}
