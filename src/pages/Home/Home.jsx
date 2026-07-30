@@ -13,7 +13,7 @@ import styles from './Home.module.css';
 export const Home = () => {
   const { language } = useLanguage();
   const [selectedImage, setSelectedImage] = useState(null);
-  const [activeGalleryImage, setActiveGalleryImage] = useState("/images/main.png");
+  const [activeGalleryImage, setActiveGalleryImage] = useState("/images/mew 3.png");
 
   const content = {
     en: {
@@ -109,10 +109,10 @@ export const Home = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <img
-              src="/images/main.png"
+              src="/images/mew 3.png"
               alt="QZENDA Product"
               className={styles.heroImage}
-              onClick={() => setSelectedImage("/images/main.png")}
+              onClick={() => setSelectedImage("/images/mew 3.png")}
               style={{ cursor: 'pointer' }}
             />
             <div className={styles.backdropGlow}></div>
@@ -169,7 +169,7 @@ export const Home = () => {
             </div>
 
             <div className={styles.thumbnailList}>
-              {["/images/main.png", "/images/1.png", "/images/new 1.png", "/images/new 2.png", "/images/mew 3.png", "/images/mew 4.png"].map((src, idx) => (
+              {["/images/mew 3.png", "/images/main.png", "/images/1.png", "/images/new 2.png", "/images/mew 4.png"].map((src, idx) => (
                 <button
                   key={idx}
                   className={`${styles.thumbnailBtn} ${activeGalleryImage === src ? styles.activeThumbnail : ''}`}
