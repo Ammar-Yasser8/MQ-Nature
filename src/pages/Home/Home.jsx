@@ -169,7 +169,7 @@ export const Home = () => {
             </div>
 
             <div className={styles.thumbnailList}>
-              {["/images/new 1.png", "/images/new 2.png", "/images/mew 4.png", "/images/main.png"].map((src, idx) => (
+              {["/images/main.png", "/images/1.png", "/images/new 1.png", "/images/new 2.png", "/images/mew 3.png", "/images/mew 4.png"].map((src, idx) => (
                 <button
                   key={idx}
                   className={`${styles.thumbnailBtn} ${activeGalleryImage === src ? styles.activeThumbnail : ''}`}

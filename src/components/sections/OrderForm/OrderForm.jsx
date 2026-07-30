@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, MessageSquare } from 'lucide-react';
+import { Phone, MessageSquare, Facebook } from 'lucide-react';
 import { useLanguage } from '../../../contexts/LanguageContext';
 import styles from './OrderForm.module.css';
 
@@ -88,8 +88,10 @@ export const OrderForm = () => {
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className={styles.facebookLink}
+                style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--color-primary)', textDecoration: 'none', fontWeight: 'bold' }}
               >
-                Facebook Page ↗
+                <Facebook size={18} />
+                <span>Facebook Page</span>
               </a>
             </p>
           </div>

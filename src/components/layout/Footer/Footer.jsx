@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLanguage } from '../../../contexts/LanguageContext';
+import { Facebook } from 'lucide-react';
 import styles from './Footer.module.css';
 
 export const Footer = () => {
@@ -47,8 +48,10 @@ export const Footer = () => {
             target="_blank" 
             rel="noopener noreferrer" 
             className={styles.facebookFooterLink}
+            style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}
           >
-            Facebook ↗
+            <Facebook size={18} />
+            Facebook
           </a>
         </div>
       </div>
