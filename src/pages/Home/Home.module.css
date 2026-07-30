@@ -264,8 +264,11 @@
 .thumbnailList {
   display: flex;
   justify-content: center;
-  gap: var(--spacing-4);
-  flex-wrap: wrap;
+  gap: var(--spacing-3);
+  flex-wrap: nowrap;
+  max-width: 100%;
+  overflow-x: auto;
+  padding: 4px 0;
 }
 
 .thumbnailBtn {
