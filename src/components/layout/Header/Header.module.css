@@ -4,18 +4,45 @@
   left: 0;
   width: 100%;
   z-index: 50;
-  background: transparent;
-  transition: all var(--transition-normal);
-  padding: var(--spacing-4) 0;
-}
-
-.header.scrolled {
   background: var(--color-surface-glass);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  transition: all var(--transition-normal);
+  padding: 0 0 var(--spacing-3) 0;
   border-bottom: 1px solid var(--color-border);
-  padding: var(--spacing-2) 0;
 }
+
+.header.scrolled {
+  box-shadow: var(--shadow-glass);
+}
+
+.topBar {
+  background: linear-gradient(90deg, #170725 0%, #2b0f44 50%, #170725 100%);
+  border-bottom: 1px solid rgba(223, 184, 108, 0.2);
+  padding: 6px 0;
+  text-align: center;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--color-gold);
+}
+
+.topBarContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.topBarText {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  letter-spacing: 0.02em;
+}
+
+.lockIcon {
+  color: var(--color-gold);
+}
+
 
 .headerContainer {
   display: flex;
@@ -39,6 +66,15 @@
   height: 40px;
   border-radius: var(--radius-sm);
   object-fit: cover;
+  border: 1px solid var(--color-border);
+}
+
+.brandName {
+  background: linear-gradient(135deg, #f7e2a9 0%, #dfb86c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
 .desktopNav {
@@ -49,13 +85,31 @@
 
 .desktopNav a {
   font-size: 0.9375rem;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--color-text-muted);
   transition: color var(--transition-fast);
+  position: relative;
+  padding: 4px 0;
 }
 
 .desktopNav a:hover {
-  color: var(--color-text-main);
+  color: var(--color-gold);
+}
+
+.desktopNav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-gold);
+  transition: width var(--transition-fast);
+  border-radius: 2px;
+}
+
+.desktopNav a:hover::after {
+  width: 100%;
 }
 
 .actions {
@@ -67,11 +121,12 @@
 .langToggle {
   text-transform: uppercase;
   font-weight: 700;
+  color: var(--color-gold) !important;
 }
 
 .mobileMenuBtn {
   display: block;
-  color: var(--color-text-main);
+  color: var(--color-gold);
 }
 
 .mobileNav {
@@ -79,12 +134,12 @@
   top: 100%;
   left: 0;
   width: 100%;
-  background: var(--color-background);
+  background: var(--color-surface);
   border-bottom: 1px solid var(--color-border);
   display: flex;
   flex-direction: column;
   padding: var(--spacing-4) var(--spacing-6);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-lg);
 }
 
 .mobileNav a {
@@ -107,3 +162,29 @@
     display: none;
   }
 }
+
+:global([data-theme='light']) .header {
+  background: rgba(255, 255, 255, 0.92);
+  border-bottom: 1px solid rgba(181, 142, 67, 0.25);
+}
+
+:global([data-theme='light']) .brandName {
+  background: linear-gradient(135deg, #1d072e 0%, #8c641d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+:global([data-theme='light']) .desktopNav a {
+  color: #3e2b52;
+}
+
+:global([data-theme='light']) .desktopNav a:hover {
+  color: #a67c30;
+}
+
+:global([data-theme='light']) .topBar {
+  background: linear-gradient(90deg, #220c36 0%, #3e165d 50%, #220c36 100%);
+  color: #f7e2a9;
+}
+
+

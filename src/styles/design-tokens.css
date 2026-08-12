@@ -1,32 +1,48 @@
 /* design-tokens.css */
 :root {
-  /* Colors */
-  --color-primary: #111111; /* Apple/Vercel style stark black */
-  --color-primary-hover: #333333;
-  --color-accent: #16a85f; /* Keeping the MQ Nature green */
-  --color-accent-hover: #0f7c45;
-  --color-accent-light: rgba(22, 168, 95, 0.1);
-  --color-blue: #2f347f; /* MQ Nature blue */
-  --color-blue-dark: #20255f;
-  
-  --color-background: #fafafc; /* Slightly cool off-white for premium feel */
-  --color-bg-gradient: radial-gradient(circle at 15% 50%, rgba(22, 168, 95, 0.04), transparent 30%), 
-                       radial-gradient(circle at 85% 30%, rgba(47, 52, 127, 0.04), transparent 30%);
-  --color-surface: #ffffff;
-  --color-surface-hover: #f9fafa;
-  --color-surface-glass: rgba(255, 255, 255, 0.75);
-  
-  --color-text-main: #0f1115; /* Deeper, richer black */
-  --color-text-muted: #5e6470;
-  --color-text-inverse: #ffffff;
+  /* Colors - Royal Dark Plum & Luxury Gold Theme */
+  --color-primary: #dfb86c;
+  /* Luxury Champagne Gold */
+  --color-primary-hover: #ebd092;
+  --color-accent: #e5c179;
+  /* Gold Accent */
+  --color-accent-hover: #f3d79a;
+  --color-accent-light: rgba(223, 184, 108, 0.15);
 
-  --color-border: rgba(0, 0, 0, 0.06);
-  --color-border-hover: rgba(0, 0, 0, 0.12);
+  --color-gold: #dfb86c;
+  --color-gold-light: #f5dc9f;
+  --color-gold-dark: #b58e43;
+  --color-gold-glow: rgba(223, 184, 108, 0.35);
+
+  --color-blue: #2d1045;
+  /* Rich Royal Plum */
+  --color-blue-dark: #1e0930;
+
+  --color-background: #180727;
+  /* Deep midnight plum base */
+  --color-bg-gradient: radial-gradient(ellipse at 20% 20%, rgba(55, 18, 85, 0.6) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 60%, rgba(42, 12, 66, 0.7) 0%, transparent 60%),
+    radial-gradient(circle at 50% 50%, rgba(223, 184, 108, 0.04) 0%, transparent 50%);
+
+  --color-surface: #220c36;
+  /* Dark plum container surface */
+  --color-surface-hover: #2b1143;
+  --color-surface-glass: rgba(34, 12, 54, 0.82);
+
+  --color-text-main: #f6f2fa;
+  /* Crisp warm off-white */
+  --color-text-muted: #bca8d1;
+  /* Muted lavender grey */
+  --color-text-inverse: #180727;
+
+  --color-border: rgba(223, 184, 108, 0.22);
+  /* Elegant gold border stroke */
+  --color-border-hover: rgba(223, 184, 108, 0.45);
 
   /* Typography */
   --font-family-en: "Inter", "Space Grotesk", sans-serif;
   --font-family-ar: "Cairo", "IBM Plex Sans Arabic", sans-serif;
-  --font-family-base: var(--font-family-en); /* Default, controlled by data-lang */
+  --font-family-base: var(--font-family-en);
 
   /* Spacing */
   --spacing-1: 0.25rem;
@@ -45,23 +61,23 @@
   /* Border Radius */
   --radius-sm: 6px;
   --radius-md: 12px;
-  --radius-lg: 24px;
-  --radius-xl: 32px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
   --radius-full: 9999px;
 
-  /* Shadows - Extremely soft, inspired by Vercel/Linear */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.02), 0 1px 3px rgba(0, 0, 0, 0.03);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.03), 0 2px 4px rgba(0, 0, 0, 0.02);
-  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.04), 0 4px 12px rgba(0, 0, 0, 0.02);
-  --shadow-glass: 0 8px 32px rgba(31, 38, 135, 0.04);
+  /* Shadows - Gold subtle ambient glow */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3), 0 0 1px rgba(223, 184, 108, 0.2);
+  --shadow-md: 0 8px 24px rgba(18, 5, 30, 0.4), 0 0 12px rgba(223, 184, 108, 0.15);
+  --shadow-lg: 0 16px 40px rgba(12, 3, 20, 0.6), 0 0 24px rgba(223, 184, 108, 0.25);
+  --shadow-glass: 0 12px 36px rgba(10, 2, 18, 0.5), inset 0 1px 0 rgba(223, 184, 108, 0.2);
 
   /* Transitions */
   --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
-  
+
   /* Layout */
-  --max-width: 1200px;
+  --max-width: 1240px;
   --header-height: 72px;
 }
 
@@ -70,18 +86,37 @@
 }
 
 [data-theme='dark'] {
-  --color-background: #0b0f19; /* Deep premium blue-black */
-  --color-bg-gradient: radial-gradient(circle at 15% 50%, rgba(22, 168, 95, 0.08), transparent 30%), 
-                       radial-gradient(circle at 85% 30%, rgba(47, 52, 127, 0.1), transparent 30%);
-  --color-surface: #151b2b;
-  --color-surface-hover: #1b2336;
-  --color-surface-glass: rgba(21, 27, 43, 0.75);
-  
-  --color-border: rgba(255, 255, 255, 0.08);
-  --color-border-hover: rgba(255, 255, 255, 0.15);
-  
-  --color-text-main: #f3f4f6;
-  --color-text-muted: #9ca3af;
-  --color-accent-light: rgba(22, 168, 95, 0.15);
+  --color-background: #140521;
+  --color-bg-gradient: radial-gradient(ellipse at 20% 20%, rgba(55, 18, 85, 0.7) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 60%, rgba(42, 12, 66, 0.8) 0%, transparent 60%),
+    radial-gradient(circle at 50% 50%, rgba(223, 184, 108, 0.05) 0%, transparent 50%);
+  --color-surface: #1e0930;
+  --color-surface-hover: #260c3d;
+  --color-surface-glass: rgba(30, 9, 48, 0.88);
+  --color-text-main: #f6f2fa;
+  --color-text-muted: #bca8d1;
+  --color-border: rgba(223, 184, 108, 0.28);
+  --color-border-hover: rgba(223, 184, 108, 0.55);
+  --color-gold: #dfb86c;
 }
 
+[data-theme='light'] {
+  --color-background: #f7f4fa;
+  --color-bg-gradient: radial-gradient(ellipse at 20% 20%, rgba(238, 226, 250, 0.9) 0%, #f7f4fa 60%),
+    radial-gradient(ellipse at 80% 60%, rgba(246, 238, 255, 0.9) 0%, #f7f4fa 60%);
+  --color-surface: #ffffff;
+  --color-surface-hover: #f2eaf8;
+  --color-surface-glass: rgba(255, 255, 255, 0.94);
+  --color-text-main: #1d072e;
+  --color-text-muted: #5e4c70;
+  --color-text-inverse: #ffffff;
+  --color-border: rgba(181, 142, 67, 0.3);
+  --color-border-hover: rgba(181, 142, 67, 0.6);
+  --color-gold: #a67c30;
+  --color-gold-light: #cfa858;
+  --color-gold-glow: rgba(181, 142, 67, 0.25);
+  --shadow-sm: 0 2px 8px rgba(35, 12, 54, 0.06);
+  --shadow-md: 0 8px 24px rgba(35, 12, 54, 0.08);
+  --shadow-lg: 0 16px 40px rgba(35, 12, 54, 0.12);
+  --shadow-glass: 0 12px 36px rgba(35, 12, 54, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}

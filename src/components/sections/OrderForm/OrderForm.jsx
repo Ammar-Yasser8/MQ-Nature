@@ -15,7 +15,7 @@ export const OrderForm = () => {
   const content = {
     en: {
       title: "Place an Order",
-      subtitle: "Interested in QZENDA for your clinic or personal use? Reach out to us.",
+      subtitle: "Interested in QZENDA for your clinic? Reach out to us.",
       contactEmail: "Email us at: ",
       contactPhone: "Call or WhatsApp: ",
       form: {
@@ -29,7 +29,7 @@ export const OrderForm = () => {
     },
     ar: {
       title: "اطلب الآن",
-      subtitle: "هل أنت مهتم بتوفير QZENDA لعيادتك أو للاستخدام الشخصي؟ تواصل معنا.",
+      subtitle: "هل أنت مهتم بتوفير QZENDA لعيادتك؟ تواصل معنا.",
       contactEmail: "راسلنا على: ",
       contactPhone: "اتصل أو واتساب: ",
       form: {

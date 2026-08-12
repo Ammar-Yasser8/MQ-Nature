@@ -1,11 +1,14 @@
 .card {
-  background: var(--color-background);
+  background: var(--color-surface-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-xl);
   padding: var(--spacing-6);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-glass);
   transition: all var(--transition-normal);
   overflow: hidden;
+  position: relative;
 }
 
 .hoverable {
@@ -13,6 +16,8 @@
 }
 
 .hoverable:hover {
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(10, 2, 18, 0.7), 0 0 20px rgba(223, 184, 108, 0.25);
   border-color: var(--color-border-hover);
 }
+

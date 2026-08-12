@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ShieldCheck, Award, Leaf } from 'lucide-react';
+import { X, ShieldCheck, Award, Leaf, ZoomIn } from 'lucide-react';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { Button } from '../../components/ui/Button/Button';
 import { Card } from '../../components/ui/Card/Card';
@@ -13,38 +13,123 @@ import styles from './Home.module.css';
 export const Home = () => {
   const { language } = useLanguage();
   const [selectedImage, setSelectedImage] = useState(null);
-  const [activeGalleryImage, setActiveGalleryImage] = useState("/images/mew 3.png");
 
   const content = {
     en: {
-      heroTitle: "Advanced Weight Management,\nPowered by Nature.",
-      heroSubtitle: "Discover QZENDA, MQ Nature's premium weight management formula, carefully developed with scientifically selected ingredients to support healthy weight goals.",
-      shopBtn: "Shop QZENDA",
-      learnBtn: "Learn More",
-      badges: ["Formulated in the USA", "cGMP Manufactured", "Non-GMO Ingredients"],
+      heroTitle: "Advanced Medical Formula\nfor Maximum Efficacy",
+      heroSubtitle: "Scientifically formulated and clinically proven to support your metabolic goals with the highest standards of US purity.",
+      shopBtn: "For Healthcare Professionals / Find Clinic",
+      learnBtn: "Clinical Trials",
+      badges: ["Formulated in USA", "cGMP Certified", "Non-GMO Project"],
+      advantageTitle: "The Qzenda Advantage: Science & Purity",
+      advantageCards: [
+        {
+          title: "Metabolic Acceleration",
+          img: "/images/Metabolic.png",
+          alt: "Metabolic Acceleration Diagram"
+        },
+        {
+          title: "Appetite Regulation",
+          img: "/images/AppetiteRegultion.png",
+          alt: "Appetite Regulation Diagram"
+        },
+        {
+          title: "Bioavailable Ingredients",
+          img: "/images/BioavilableIngredilents.png",
+          alt: "Bioavailable Ingredients Diagram"
+        },
+        {
+          title: "Natural Origins",
+          img: "/images/NaturalOrigins.png",
+          alt: "Natural Origins Diagram"
+        }
+      ],
       featuresTitle: "Why Choose QZENDA?",
       features: [
-        { title: "Potent Ingredients", desc: "Clinically recognized ingredients." },
-        { title: "Boost Metabolism", desc: "Supports your body's natural metabolic activity." },
-        { title: "Promotes Satiety", desc: "Helps you stay satisfied longer." }
+        { title: "Targeted Mechanism of Action", desc: "Clinically recognized targeted formula." },
+        { title: "Pharmaceutical Grade Purity", desc: "Highest standards of US manufacturing & purity." },
+        { title: "#1 Doctor Recommended", desc: "Trusted by specialized healthcare professionals." }
       ],
       galleryTitle: "Discover the QZENDA Difference",
-      gallerySubtitle: "QZENDA is MQ Nature's flagship weight management formula. Formulated in the USA and cGMP certified, combining 5 synergistic natural extracts to support metabolism, control appetite, and sustain daily energy."
+      gallerySubtitle: "QZENDA is MQ Nature's flagship medical-grade formula. Formulated in the USA and cGMP certified, combining 5 synergistic natural extracts to support metabolism, control appetite, and sustain daily energy.",
+      galleryItems: [
+        {
+          id: 1,
+          title: "Complete Composition & Facts",
+          desc: "Full formula breakdown with blister capsule packaging.",
+          img: "/images/1.png"
+        },
+        {
+          id: 2,
+          title: "Daily Wellness Routine",
+          desc: "Designed for seamless incorporation into your daily health regimen.",
+          img: "/images/2.jpeg"
+        },
+        {
+          id: 3,
+          title: "Pure Capsule Showcase",
+          desc: "Precision manufacturing with 100% bioavailable ingredients.",
+          img: "/images/3.png"
+        }
+      ]
     },
     ar: {
-      heroTitle: "إدارة وزن متقدمة،\nمدفوعة بالطبيعة.",
-      heroSubtitle: "اكتشف QZENDA، تركيبة MQ Nature المتميزة لإدارة الوزن، والمطورة بعناية باستخدام مكونات مختارة علمياً لدعم أهداف الوزن الصحي.",
-      shopBtn: "تسوق QZENDA",
-      learnBtn: "اعرف المزيد",
-      badges: ["تمت صياغته في الولايات المتحدة", "مصنع وفق معايير cGMP", "مكونات غير معدلة وراثيًا"],
+      heroTitle: "تركيبة طبية متطورة\nلأقصى درجات الفعالية",
+      heroSubtitle: "مُصمم علمياً ومثبت سريرياً بأعلى معايير النقاء والجودة الأمريكية لدعم أهدافك الصحية.",
+      shopBtn: "ابحث عن عيادة معتمدة / للمتخصصين",
+      learnBtn: "التجارب السريرية",
+      badges: ["Formulated in USA", "cGMP Certified", "Non-GMO Project"],
+      advantageTitle: "آلية العمل | نقاء دوائي فائق",
+      advantageCards: [
+        {
+          title: "تسريع عملية الأيض",
+          img: "/images/Metabolic.png",
+          alt: "تسريع عملية الأيض"
+        },
+        {
+          title: "تنظيم الشهية",
+          img: "/images/AppetiteRegultion.png",
+          alt: "تنظيم الشهية"
+        },
+        {
+          title: "مكونات عالية الامتصاص",
+          img: "/images/BioavilableIngredilents.png",
+          alt: "مكونات عالية الامتصاص"
+        },
+        {
+          title: "مصادر طبيعية 100%",
+          img: "/images/NaturalOrigins.png",
+          alt: "مصادر طبيعية"
+        }
+      ],
       featuresTitle: "لماذا تختار QZENDA؟",
       features: [
-        { title: "مكونات فعالة", desc: "مكونات معروفة سريريًا." },
-        { title: "دعم الأيض", desc: "يدعم النشاط الطبيعي لعملية الأيض." },
-        { title: "تعزيز الشبع", desc: "يساعدك على الشعور بالشبع لفترة أطول." }
+        { title: "آلية عمل موجهة", desc: "تركيبة محددة الأهداف ومثبتة سريرياً." },
+        { title: "نقاء دوائي فائق", desc: "أعلى معايير النقاء والجودة الأمريكية." },
+        { title: "الخيار الأول للأطباء", desc: "موثوق من قبل الأطباء والمتخصصين في الرعاية الصحية." }
       ],
       galleryTitle: "اكتشف فرق QZENDA",
-      gallerySubtitle: "QZENDA هي تركيبة MQ Nature الرائدة لإدارة الوزن. صُممت في الولايات المتحدة ومعتمدة وفق معايير cGMP، تجمع بين 5 خلاصة طبيعية لدعم الأيض والتحكم بالشهية."
+      gallerySubtitle: "QZENDA هي تركيبة MQ Nature الرائدة لإدارة الوزن. صُممت في الولايات المتحدة ومعتمدة وفق معايير cGMP، تجمع بين 5 خلاصة طبيعية لدعم الأيض والتحكم بالشهية.",
+      galleryItems: [
+        {
+          id: 1,
+          title: "التركيبة الشاملة والحقائق الغذائية",
+          desc: "عرض تفصيلي للغلاف والشريط الدوائي المعتمد.",
+          img: "/images/1.png"
+        },
+        {
+          id: 2,
+          title: "الاستخدام اليومي والصحي",
+          desc: "مصمم ليتوافق بسلاسة مع نظامك الغذائي اليومي.",
+          img: "/images/2.jpeg"
+        },
+        {
+          id: 3,
+          title: "عرض الكبسولة النقية",
+          desc: "تصنيع دقيق بمكونات طبيعية 100% عالية الامتصاص.",
+          img: "/images/3.png"
+        }
+      ]
     }
   }[language];
 
@@ -64,7 +149,7 @@ export const Home = () => {
               {content.heroSubtitle.split('QZENDA').map((part, i, arr) => (
                 <React.Fragment key={i}>
                   {part}
-                  {i < arr.length - 1 && <span className="text-gradient" style={{ color: 'var(--color-accent)' }}>QZENDA</span>}
+                  {i < arr.length - 1 && <span className="text-gradient" style={{ color: 'var(--color-gold)' }}>QZENDA</span>}
                 </React.Fragment>
               ))}
             </p>
@@ -109,10 +194,10 @@ export const Home = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <img
-              src="/images/mew 3.png"
+              src="/images/HomeImage.png"
               alt="QZENDA Product"
               className={styles.heroImage}
-              onClick={() => setSelectedImage("/images/mew 3.png")}
+              onClick={() => setSelectedImage("/images/HomeImage.png")}
               style={{ cursor: 'pointer' }}
             />
             <div className={styles.backdropGlow}></div>
@@ -120,10 +205,43 @@ export const Home = () => {
         </div>
       </section>
 
+      {/* The Qzenda Advantage: Science & Purity Section */}
+      <section className={styles.advantageSection} id="advantage">
+        <div className="app-container">
+          <motion.h2 
+            className={styles.sectionTitle}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5 }}
+          >
+            {content.advantageTitle}
+          </motion.h2>
+
+          <div className={styles.advantageGrid}>
+            {content.advantageCards.map((card, idx) => (
+              <motion.div
+                key={idx}
+                className={styles.advantageCard}
+                initial={{ opacity: 0, y: 25 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: idx * 0.12 }}
+                onClick={() => setSelectedImage(card.img)}
+              >
+                <div className={styles.advantageImgContainer}>
+                  <img src={card.img} alt={card.alt} className={styles.advantageImg} />
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
       <About />
 
-      {/* Features Section */}
+      {/* Why Choose QZENDA Features Section */}
       <section className={styles.features} id="products">
         <div className="app-container">
           <h2 className={styles.sectionTitle}>{content.featuresTitle}</h2>
@@ -142,43 +260,42 @@ export const Home = () => {
       <CoreValues />
 
       {/* Supplement Facts Section */}
-      <SupplementFacts />
+      <div id="facts">
+        <SupplementFacts />
+      </div>
 
-      {/* Image Gallery Section */}
-      <section className={styles.gallery}>
+      {/* Discover the QZENDA Difference Section - Premium 3-Image Showcase (1, 2, 3) */}
+      <section className={styles.differenceGallery}>
         <div className="app-container">
           <div className={styles.galleryHeader}>
             <h2>{content.galleryTitle}</h2>
             <p>{content.gallerySubtitle}</p>
           </div>
-          <div className={styles.galleryShowcase}>
-            <div className={styles.mainImageContainer}>
-              <AnimatePresence mode="wait">
-                <motion.img
-                  key={activeGalleryImage}
-                  src={activeGalleryImage}
-                  alt="QZENDA Product Showcase"
-                  className={styles.mainGalleryImage}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  transition={{ duration: 0.3 }}
-                  onClick={() => setSelectedImage(activeGalleryImage)}
-                />
-              </AnimatePresence>
-            </div>
 
-            <div className={styles.thumbnailList}>
-              {["/images/mew 3.png", "/images/main.png", "/images/1.png", "/images/new 2.png", "/images/mew 4.png"].map((src, idx) => (
-                <button
-                  key={idx}
-                  className={`${styles.thumbnailBtn} ${activeGalleryImage === src ? styles.activeThumbnail : ''}`}
-                  onClick={() => setActiveGalleryImage(src)}
-                >
-                  <img src={src} alt={`Thumbnail ${idx + 1}`} />
-                </button>
-              ))}
-            </div>
+          <div className={styles.threeCardGrid}>
+            {content.galleryItems.map((item, idx) => (
+              <motion.div
+                key={item.id}
+                className={styles.showcaseCard}
+                initial={{ opacity: 0, y: 25 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: idx * 0.15 }}
+                onClick={() => setSelectedImage(item.img)}
+              >
+                <div className={styles.showcaseBadge}>Image 0{item.id}</div>
+                <div className={styles.showcaseImgWrapper}>
+                  <img src={item.img} alt={item.title} className={styles.showcaseImg} />
+                  <div className={styles.zoomHoverOverlay}>
+                    <ZoomIn size={28} className={styles.zoomIcon} />
+                  </div>
+                </div>
+                <div className={styles.showcaseContent}>
+                  <h3>{item.title}</h3>
+                  <p>{item.desc}</p>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -214,3 +331,5 @@ export const Home = () => {
     </div>
   );
 };
+
+

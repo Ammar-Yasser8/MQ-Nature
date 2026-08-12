@@ -1,13 +1,18 @@
 .coreValues {
   padding: var(--spacing-16) 0;
-  background: var(--color-background);
+  background: transparent;
+  position: relative;
 }
 
 .title {
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.25rem;
+  font-weight: 800;
   margin-bottom: var(--spacing-10);
-  color: var(--color-text-main);
+  background: linear-gradient(135deg, #f7e2a9 0%, #dfb86c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .grid {
@@ -23,30 +28,33 @@
 }
 
 .valueCard {
-  background: var(--color-surface);
-  border: 1px solid var(--color-accent);
+  background: var(--color-surface-glass);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  padding: var(--spacing-6);
+  padding: var(--spacing-8);
   text-align: center;
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-glass);
   transition: all var(--transition-normal);
 }
 
 .valueCard:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-  background: var(--color-accent-light);
+  box-shadow: 0 12px 32px rgba(10, 2, 18, 0.6), 0 0 20px rgba(223, 184, 108, 0.25);
+  border-color: var(--color-gold);
+  background: var(--color-surface-hover);
 }
 
 .cardTitle {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: 700;
-  color: var(--color-text-main);
-  margin-bottom: var(--spacing-2);
+  color: var(--color-gold);
+  margin-bottom: var(--spacing-3);
 }
 
 .cardDesc {
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   color: var(--color-text-muted);
-  line-height: 1.5;
+  line-height: 1.6;
 }
+

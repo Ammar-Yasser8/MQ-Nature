@@ -2,71 +2,82 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-weight: 600;
+  font-weight: 700;
   border-radius: var(--radius-full);
-  transition: all var(--transition-fast);
+  transition: all var(--transition-normal);
   text-decoration: none;
   border: 1px solid transparent;
   gap: var(--spacing-2);
+  cursor: pointer;
+  letter-spacing: 0.01em;
 }
 
 /* Variants */
 .primary {
-  background: var(--color-primary);
-  color: var(--color-text-inverse);
-  box-shadow: var(--shadow-md);
+  background: linear-gradient(135deg, #f5dc9f 0%, #dfb86c 50%, #b58e43 100%);
+  color: #170725;
+  box-shadow: 0 4px 20px rgba(223, 184, 108, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 240, 200, 0.5);
 }
 
 .primary:hover {
-  background: var(--color-primary-hover);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #fae6b3 0%, #ebd092 50%, #c79e52 100%);
+  box-shadow: 0 8px 28px rgba(223, 184, 108, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.6);
 }
 
 .secondary {
-  background: var(--color-surface);
-  color: var(--color-text-main);
+  background: var(--color-surface-glass);
+  color: var(--color-gold);
   border-color: var(--color-border);
+  backdrop-filter: blur(12px);
 }
 
 .secondary:hover {
   background: var(--color-surface-hover);
   border-color: var(--color-border-hover);
+  color: var(--color-text-main);
+  transform: translateY(-2px);
 }
 
 .ghost {
   background: transparent;
   color: var(--color-text-main);
+  border-color: rgba(223, 184, 108, 0.15);
 }
 
 .ghost:hover {
-  background: var(--color-surface);
+  background: rgba(223, 184, 108, 0.1);
+  border-color: var(--color-border);
+  color: var(--color-gold);
 }
 
 .accent {
-  background: var(--color-accent);
-  color: var(--color-text-inverse);
+  background: linear-gradient(135deg, #dfb86c 0%, #b58e43 100%);
+  color: #170725;
   box-shadow: var(--shadow-md);
 }
 
 .accent:hover {
-  background: var(--color-accent-hover);
+  background: linear-gradient(135deg, #ebd092 0%, #c79e52 100%);
 }
 
 /* Sizes */
 .sm {
-  height: 32px;
-  padding: 0 var(--spacing-3);
+  height: 36px;
+  padding: 0 var(--spacing-4);
   font-size: 0.875rem;
 }
 
 .md {
   height: 44px;
-  padding: 0 var(--spacing-5);
-  font-size: 1rem;
+  padding: 0 var(--spacing-6);
+  font-size: 0.95rem;
 }
 
 .lg {
   height: 52px;
   padding: 0 var(--spacing-8);
-  font-size: 1.125rem;
+  font-size: 1.05rem;
 }
+

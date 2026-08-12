@@ -29,7 +29,7 @@ export const Footer = () => {
       <div className={`app-container ${styles.footerContainer}`}>
         <div className={styles.brandInfo}>
           <div className={styles.logo}>
-            <img src="/images/logo.jpeg" alt="MQ Nature Logo" className={styles.logoImg} />
+            <img src="/images/logo-removebg-preview.png" alt="MQ Nature Logo" className={styles.logoImg} />
             <span className={styles.brandName}>MQ Nature</span>
           </div>
           <p className={styles.desc}>{content.desc}</p>

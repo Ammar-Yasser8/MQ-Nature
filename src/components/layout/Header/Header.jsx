@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Globe, Moon, Sun } from 'lucide-react';
+import { Menu, X, Globe, Moon, Sun, Lock } from 'lucide-react';
 import { useLanguage } from '../../../contexts/LanguageContext';
 import { useTheme } from '../../../contexts/ThemeContext';
 import { Button } from '../../ui/Button/Button';
@@ -13,8 +13,22 @@ export const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const t = {
-    en: { home: 'Home', products: 'Products', about: 'About', contact: 'Contact' },
-    ar: { home: 'الرئيسية', products: 'المنتجات', about: 'من نحن', contact: 'اتصل بنا' }
+    en: { 
+      topBar: 'Hospital & Clinic Exclusive Product',
+      home: 'Home', 
+      trials: 'Clinical Trials', 
+      howItWorks: 'How It Works', 
+      facts: 'Supplement Facts', 
+      contact: 'Contact Us' 
+    },
+    ar: { 
+      topBar: 'منتج حصري للمستشفيات والمراكز الطبية المعتمدة',
+      home: 'الرئيسية', 
+      trials: 'التجارب السريرية', 
+      howItWorks: 'آلية العمل', 
+      facts: 'الحقائق الغذائية', 
+      contact: 'تواصل معنا' 
+    }
   }[language];
 
   useEffect(() => {
@@ -27,23 +41,31 @@ export const Header = () => {
 
   return (
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
+      {/* Exclusive Top Bar */}
+      <div className={styles.topBar}>
+        <div className={`app-container ${styles.topBarContainer}`}>
+          <span className={styles.topBarText}>
+            <Lock size={14} className={styles.lockIcon} />
+            {t.topBar}
+          </span>
+        </div>
+      </div>
+
       <div className={`app-container ${styles.headerContainer}`}>
         <div className={styles.logo}>
-          <img src="/images/logo.jpeg" alt="MQ Nature Logo" className={styles.logoImg} />
+          <img src="/images/logo-removebg-preview.png" alt="MQ Nature Logo" className={styles.logoImg} />
           <span className={styles.brandName}>MQ Nature</span>
         </div>
 
         <nav className={styles.desktopNav}>
           <a href="#home">{t.home}</a>
-          <a href="#products">{t.products}</a>
-          <a href="#about">{t.about}</a>
-          <a href="#contact">{t.contact}</a>
+          <a href="#about">{t.trials}</a>
+          <a href="#advantage">{t.howItWorks}</a>
+          <a href="#facts">{t.facts}</a>
+          <a href="#order">{t.contact}</a>
         </nav>
 
         <div className={styles.actions}>
-          <Button variant="ghost" size="sm" onClick={toggleTheme} className={styles.themeToggle}>
-            {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
-          </Button>
           <Button variant="ghost" size="sm" onClick={toggleLanguage} className={styles.langToggle}>
             <Globe size={18} />
             {language === 'en' ? 'عربي' : 'EN'}
@@ -64,12 +86,14 @@ export const Header = () => {
             exit={{ opacity: 0, y: -20 }}
           >
             <a href="#home" onClick={() => setIsMobileMenuOpen(false)}>{t.home}</a>
-            <a href="#products" onClick={() => setIsMobileMenuOpen(false)}>{t.products}</a>
-            <a href="#about" onClick={() => setIsMobileMenuOpen(false)}>{t.about}</a>
-            <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>{t.contact}</a>
+            <a href="#about" onClick={() => setIsMobileMenuOpen(false)}>{t.trials}</a>
+            <a href="#advantage" onClick={() => setIsMobileMenuOpen(false)}>{t.howItWorks}</a>
+            <a href="#facts" onClick={() => setIsMobileMenuOpen(false)}>{t.facts}</a>
+            <a href="#order" onClick={() => setIsMobileMenuOpen(false)}>{t.contact}</a>
           </motion.nav>
         )}
       </AnimatePresence>
     </header>
   );
 };
+

@@ -1,7 +1,10 @@
 .footer {
-  background: var(--color-surface);
+  background: rgba(22, 7, 36, 0.95);
+  backdrop-filter: blur(16px);
   border-top: 1px solid var(--color-border);
   padding-top: var(--spacing-16);
+  position: relative;
+  z-index: 2;
 }
 
 .footerContainer {
@@ -29,6 +32,10 @@
   font-weight: 800;
   font-size: 1.25rem;
   margin-bottom: var(--spacing-4);
+  background: linear-gradient(135deg, #f7e2a9 0%, #dfb86c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .logoImg {
@@ -36,6 +43,7 @@
   height: 40px;
   border-radius: var(--radius-sm);
   object-fit: cover;
+  border: 1px solid var(--color-border);
 }
 
 .desc {
@@ -63,11 +71,11 @@
 }
 
 .link:hover {
-  color: var(--color-text-main);
+  color: var(--color-gold);
 }
 
 .facebookFooterLink {
-  color: #1877F2;
+  color: #3b82f6;
   font-weight: 600;
   transition: opacity var(--transition-fast);
 }
@@ -78,7 +86,7 @@
   transition: opacity var(--transition-fast);
 }
 
-.facebookFooterLink:hover {
+.facebookFooterLink:hover, .whatsappFooterLink:hover {
   opacity: 0.8;
 }
 
@@ -89,3 +97,4 @@
   color: var(--color-text-muted);
   font-size: 0.875rem;
 }
+
