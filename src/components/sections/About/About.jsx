@@ -9,8 +9,8 @@ export const About = () => {
   const content = {
     en: {
       aboutTitle: "About Us",
-      aboutHeadline: "Where Nature Meets Science",
-      aboutDesc: "At MQ Nature, we believe that true wellness begins where the purity of nature meets the precision of modern science. We specialize in developing premium nutritional supplements designed to support healthier lives through innovative, science-backed formulations.",
+      aboutHeadline: "Where Nature Meets the Power of Science",
+      aboutDesc: "At MQ Nature, we believe that true wellness begins where the purity of nature meets the power of modern science. We are an ultra-premium supplement company dedicated to providing innovative health solutions backed entirely by scientific formulations.",
       visionTitle: "Our Vision",
       visionDesc: "To become the gold standard and the most trusted name in premium nutritional and therapeutic supplements across the Middle East, establishing MQ Nature as a symbol of scientific credibility, manufacturing excellence, and clinically trusted results.",
       missionTitle: "Our Mission",
@@ -18,8 +18,8 @@ export const About = () => {
     },
     ar: {
       aboutTitle: "من نحن",
-      aboutHeadline: "حيث تلتقي الطبيعة مع العلم",
-      aboutDesc: "في MQ Nature نؤمن بأن العافية الحقيقية تبدأ عندما تلتقي نقاوة الطبيعة مع صرامة العلم الحديث. نحن شركة متخصصة في تطوير المكملات الغذائية الفاخرة، حيث نكرس جهودنا لتقديم حلول صحية مبتكرة تعتمد بالكامل على تركيبات علمية.",
+      aboutHeadline: "حيث تلتقي الطبيعة مع قوة العلم",
+      aboutDesc: "في MQ Nature نؤمن بأن العافية الحقيقية تبدأ عندما تلتقي نقاوة الطبيعة مع قوة العلم الحديث. نحن شركة المكملات الغذائية فائقة الجودة، حيث نكرس جهودنا لتقديم حلول صحية مبتكرة تعتمد بالكامل على تركيبات علمية.",
       visionTitle: "رؤيتنا",
       visionDesc: "أن نصبح المعيار الذهبي والأكثر موثوقية في قطاع المكملات الغذائية والعلاجية البريميوم في منطقة الشرق الأوسط، وأن ترتبط الهوية المؤسسية لـ MQ Nature في أذهان الأطباء والمستهلكين بالشرعية العلمية المطلقة والفخامة التصنيعية.",
       missionTitle: "رسالتنا",

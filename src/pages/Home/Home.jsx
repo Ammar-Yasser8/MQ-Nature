@@ -20,7 +20,12 @@ export const Home = () => {
       heroSubtitle: "Scientifically formulated and clinically proven to support your metabolic goals with the highest standards of US purity.",
       shopBtn: "For Healthcare Professionals / Find Clinic",
       learnBtn: "Clinical Trials",
-      badges: ["Formulated in USA", "cGMP Certified", "Non-GMO Project"],
+      badges: [
+        { title: "KETO FRIENDLY", desc: "Low Carb Approved", iconType: "keto" },
+        { title: "cGMP Certified", desc: "Current Good Practice", iconType: "cgmp" },
+        { title: "NON-GMO Project", desc: "100% Non-GMO Formula", iconType: "nongmo" },
+        { title: "Formulated in USA", desc: "US Standards Purity", iconType: "usa" }
+      ],
       advantageTitle: "The Qzenda Advantage: Science & Purity",
       advantageCards: [
         {
@@ -57,28 +62,33 @@ export const Home = () => {
           id: 1,
           title: "Complete Composition & Facts",
           desc: "Full formula breakdown with blister capsule packaging.",
-          img: "/images/1.png"
+          img: "/images/new_image1.PNG"
         },
         {
           id: 2,
           title: "Daily Wellness Routine",
           desc: "Designed for seamless incorporation into your daily health regimen.",
-          img: "/images/2.jpeg"
+          img: "/images/newimage2.PNG"
         },
         {
           id: 3,
           title: "Pure Capsule Showcase",
           desc: "Precision manufacturing with 100% bioavailable ingredients.",
-          img: "/images/3.png"
+          img: "/images/newimge3.PNG"
         }
       ]
     },
     ar: {
       heroTitle: "تركيبة طبية متطورة\nلأقصى درجات الفعالية",
-      heroSubtitle: "مُصمم علمياً ومثبت سريرياً بأعلى معايير النقاء والجودة الأمريكية لدعم أهدافك الصحية.",
+      heroSubtitle: "مُصمم علمياً ومثبت سريرياً بأعلى معايير النقاء والجودة الأمريكية المعروفة عالمياً لدعم أهدافك الصحية.",
       shopBtn: "ابحث عن عيادة معتمدة / للمتخصصين",
       learnBtn: "التجارب السريرية",
-      badges: ["Formulated in USA", "cGMP Certified", "Non-GMO Project"],
+      badges: [
+        { title: "KETO FRIENDLY", desc: "معتمد كيتو", iconType: "keto" },
+        { title: "cGMP Certified", desc: "معيار جودة التصنيع", iconType: "cgmp" },
+        { title: "NON-GMO Project", desc: "خالٍ من التعديل الوراثي", iconType: "nongmo" },
+        { title: "Formulated in USA", desc: "مصنع بالولايات المتحدة", iconType: "usa" }
+      ],
       advantageTitle: "آلية العمل | نقاء دوائي فائق",
       advantageCards: [
         {
@@ -115,19 +125,19 @@ export const Home = () => {
           id: 1,
           title: "التركيبة الشاملة والحقائق الغذائية",
           desc: "عرض تفصيلي للغلاف والشريط الدوائي المعتمد.",
-          img: "/images/1.png"
+          img: "/images/new_image1.PNG"
         },
         {
           id: 2,
           title: "الاستخدام اليومي والصحي",
           desc: "مصمم ليتوافق بسلاسة مع نظامك الغذائي اليومي.",
-          img: "/images/2.jpeg"
+          img: "/images/newimage2.PNG"
         },
         {
           id: 3,
           title: "عرض الكبسولة النقية",
           desc: "تصنيع دقيق بمكونات طبيعية 100% عالية الامتصاص.",
-          img: "/images/3.png"
+          img: "/images/newimge3.PNG"
         }
       ]
     }
@@ -173,14 +183,49 @@ export const Home = () => {
 
             <div className={styles.badges}>
               {content.badges.map((badge, idx) => {
-                const icons = [<ShieldCheck size={20} key={0} />, <Award size={20} key={1} />, <Leaf size={20} key={2} />];
+                const getLogoIcon = (type) => {
+                  switch (type) {
+                    case 'keto':
+                      return (
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <circle cx="12" cy="12" r="9"/>
+                          <path d="M12 7v10M9 10l3-3 3 3"/>
+                        </svg>
+                      );
+                    case 'cgmp':
+                      return (
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                      );
+                    case 'nongmo':
+                      return (
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.4 19 2c1 2 2 4.1 2 8 0 5.5-4.5 10-10 10Z"/>
+                          <path d="M2 21c0-3 1.85-5.36 5.08-6"/>
+                        </svg>
+                      );
+                    case 'usa':
+                    default:
+                      return (
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <rect x="2" y="5" width="20" height="14" rx="2"/>
+                          <line x1="2" y1="10" x2="22" y2="10"/>
+                          <line x1="2" y1="14" x2="22" y2="14"/>
+                          <rect x="2" y="5" width="8" height="5" fill="currentColor" opacity="0.3"/>
+                        </svg>
+                      );
+                  }
+                };
+
                 return (
                   <div key={idx} className={styles.badgeCard}>
                     <div className={styles.badgeHeader}>
-                      <span className={styles.badgeIcon}>{icons[idx]}</span>
+                      <span className={styles.badgeIcon}>{getLogoIcon(badge.iconType)}</span>
                       <span className={styles.badgeNum}>0{idx + 1}</span>
                     </div>
-                    <strong className={styles.badgeText}>{badge}</strong>
+                    <strong className={styles.badgeText}>{badge.title}</strong>
+                    <span className={styles.badgeDesc}>{badge.desc}</span>
                   </div>
                 );
               })}

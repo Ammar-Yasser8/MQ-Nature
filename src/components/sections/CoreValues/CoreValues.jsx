@@ -11,8 +11,8 @@ export const CoreValues = () => {
       title: "Our Core Values",
       values: [
         { title: "Science-Driven Efficacy", desc: "MQNature advanced nutritional supplements." },
-        { title: "Premium Quality", desc: "Develop premium human supplements." },
-        { title: "Compliance & Integrity", desc: "Adheres to strict US quality standards." },
+        { title: "Ultra-Premium Quality", desc: "Develop ultra-premium human supplements." },
+        { title: "Compliance & Integrity", desc: "Adheres to globally recognized US quality standards." },
         { title: "Exclusive Partnership", desc: "Support medical professionals." }
       ]
     },
@@ -20,8 +20,8 @@ export const CoreValues = () => {
       title: "قيمنا الأساسية",
       values: [
         { title: "العلم والدليل أولاً", desc: "مكملات غذائية متقدمة من MQNature." },
-        { title: "الجودة الفاخرة", desc: "تطوير مكملات غذائية بشرية فاخرة." },
-        { title: "الامتثال والنزاهة", desc: "الالتزام بمعايير الجودة الأمريكية الصارمة." },
+        { title: "الجودة فائقة المستوى", desc: "تطوير مكملات غذائية بشرية فائقة الجودة." },
+        { title: "الامتثال والنزاهة", desc: "الالتزام بمعايير الجودة الأمريكية المعروفة عالمياً." },
         { title: "الشراكة الحصرية", desc: "دعم المتخصصين في المجال الطبي." }
       ]
     }
