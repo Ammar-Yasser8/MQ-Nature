@@ -16,15 +16,15 @@ export const Home = () => {
 
   const content = {
     en: {
-      heroTitle: "Advanced Medical Formula\nfor Maximum Efficacy",
-      heroSubtitle: "Scientifically formulated and clinically proven to support your metabolic goals with the highest standards of US purity.",
+      heroTitle: "The Ultimate Dual-Action Formula for Maximum Satiety and Metabolic Rate",
+      heroSubtitle: "Formulated & Certified by US FDA",
       shopBtn: "For Healthcare Professionals / Find Clinic",
       learnBtn: "Clinical Trials",
       badges: [
-        { title: "KETO FRIENDLY", desc: "Low Carb Approved", iconType: "keto" },
+        { title: "KETO APPROVED", desc: "Keto Friendly Seal", iconType: "keto" },
         { title: "cGMP Certified", desc: "Current Good Practice", iconType: "cgmp" },
-        { title: "NON-GMO Project", desc: "100% Non-GMO Formula", iconType: "nongmo" },
-        { title: "Formulated in USA", desc: "US Standards Purity", iconType: "usa" }
+        { title: "NON-GMO Project", desc: "Verified Non-GMO", iconType: "nongmo" },
+        { title: "Formulated in USA", desc: "US Quality Standards", iconType: "usa" }
       ],
       advantageTitle: "The Qzenda Advantage: Science & Purity",
       advantageCards: [
@@ -79,15 +79,15 @@ export const Home = () => {
       ]
     },
     ar: {
-      heroTitle: "تركيبة طبية متطورة\nلأقصى درجات الفعالية",
-      heroSubtitle: "مُصمم علمياً ومثبت سريرياً بأعلى معايير النقاء والجودة الأمريكية المعروفة عالمياً لدعم أهدافك الصحية.",
+      heroTitle: "التركيبة المثالية مزدوجة المفعول لتحقيق أقصى درجات الشبع وتعزيز حرق الدهون",
+      heroSubtitle: "مُطوَّرة ومعتمدة من قِبَل إدارة الغذاء والدواء الأمريكية (FDA).",
       shopBtn: "ابحث عن عيادة معتمدة / للمتخصصين",
       learnBtn: "التجارب السريرية",
       badges: [
-        { title: "KETO FRIENDLY", desc: "معتمد كيتو", iconType: "keto" },
-        { title: "cGMP Certified", desc: "معيار جودة التصنيع", iconType: "cgmp" },
+        { title: "KETO APPROVED", desc: "معتمد كيتو", iconType: "keto" },
+        { title: "cGMP Certified", desc: "معيار جودة التصنيع الدوائي", iconType: "cgmp" },
         { title: "NON-GMO Project", desc: "خالٍ من التعديل الوراثي", iconType: "nongmo" },
-        { title: "Formulated in USA", desc: "مصنع بالولايات المتحدة", iconType: "usa" }
+        { title: "Formulated in USA", desc: "معتمد ومصنع بالولايات المتحدة", iconType: "usa" }
       ],
       advantageTitle: "آلية العمل | نقاء دوائي فائق",
       advantageCards: [
@@ -186,33 +186,19 @@ export const Home = () => {
                 const getLogoIcon = (type) => {
                   switch (type) {
                     case 'keto':
-                      return (
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                          <circle cx="12" cy="12" r="9"/>
-                          <path d="M12 7v10M9 10l3-3 3 3"/>
-                        </svg>
-                      );
+                      return <img src="/images/slogan.PNG" alt="Keto Approved Logo" style={{ width: '42px', height: '42px', objectFit: 'contain' }} />;
                     case 'cgmp':
-                      return (
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                        </svg>
-                      );
+                      return <img src="/images/GMPSlogan.png" alt="cGMP Certified Logo" style={{ width: '42px', height: '42px', objectFit: 'contain' }} />;
                     case 'nongmo':
-                      return (
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                          <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.4 19 2c1 2 2 4.1 2 8 0 5.5-4.5 10-10 10Z"/>
-                          <path d="M2 21c0-3 1.85-5.36 5.08-6"/>
-                        </svg>
-                      );
+                      return <img src="/images/nonGemo.png" alt="NON-GMO Project Logo" style={{ width: '42px', height: '42px', objectFit: 'contain' }} />;
                     case 'usa':
                     default:
                       return (
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                          <rect x="2" y="5" width="20" height="14" rx="2"/>
-                          <line x1="2" y1="10" x2="22" y2="10"/>
-                          <line x1="2" y1="14" x2="22" y2="14"/>
-                          <rect x="2" y="5" width="8" height="5" fill="currentColor" opacity="0.3"/>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <rect x="2" y="5" width="20" height="14" rx="2" />
+                          <line x1="2" y1="10" x2="22" y2="10" />
+                          <line x1="2" y1="14" x2="22" y2="14" />
+                          <rect x="2" y="5" width="8" height="5" fill="currentColor" opacity="0.3" />
                         </svg>
                       );
                   }
@@ -253,7 +239,7 @@ export const Home = () => {
       {/* The Qzenda Advantage: Science & Purity Section */}
       <section className={styles.advantageSection} id="advantage">
         <div className="app-container">
-          <motion.h2 
+          <motion.h2
             className={styles.sectionTitle}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

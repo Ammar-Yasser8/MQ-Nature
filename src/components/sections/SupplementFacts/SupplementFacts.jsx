@@ -14,20 +14,20 @@ export const SupplementFacts = () => {
         { name: "Garcinia Cambogia Extract", details: "(Standardized to 60% Hydroxycitric Acid)", amount: "300 mg", dv: "†" },
         { name: "Green Tea Extract", details: "(Standardized to 98% Polyphenols & 50% EGCG)", amount: "100 mg", dv: "†" },
         { name: "Green Coffee Bean Extract", details: "(Standardized to 50% Chlorogenic Acids)", amount: "100 mg", dv: "†" },
-        { name: "CBL-T®", details: "", amount: "300 mg", dv: "†" },
+        { name: "CBL-T®", details: "(Caralluma Fimbriata, Bitter Orange Peels, L-Tyrosine)", amount: "300 mg", dv: "†" },
       ],
       footnote: "† Daily Value (DV) not established.",
       btnText: "B2B Request"
     },
     ar: {
-      title: "حقائق المكمل الغذائي",
+      title: "الحقائق الغذائية",
       tableHeaders: ["الكمية لكل حصة", "القيمة اليومية %"],
       ingredients: [
         { name: "كروميوم (Chromium Picolinate)", details: "", amount: "200 mcg", dv: "571%" },
         { name: "مستخلص غارسينيا كامبوجيا", details: "(موحد بنسبة 60% حمض هيدروكسي سيتريك)", amount: "300 mg", dv: "†" },
         { name: "مستخلص الشاي الأخضر", details: "(موحد بنسبة 98% بوليفينول و 50% EGCG)", amount: "100 mg", dv: "†" },
         { name: "مستخلص حبوب القهوة الخضراء", details: "(موحد بنسبة 50% أحماض الكلوروجينيك)", amount: "100 mg", dv: "†" },
-        { name: "CBL-T®", details: "", amount: "300 mg", dv: "†" },
+        { name: "CBL-T®", details: "(Caralluma Fimbriata, Bitter Orange Peels, L-Tyrosine / كارالوما فيمبرياتا، قشور البرتقال المر، ل-تايروسين)", amount: "300 mg", dv: "†" },
       ],
       footnote: "† القيمة اليومية (DV) غير محددة.",
       btnText: "طلب تعاقد للأطباء"
