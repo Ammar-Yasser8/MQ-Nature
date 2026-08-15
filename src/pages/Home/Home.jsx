@@ -262,6 +262,9 @@ export const Home = () => {
               >
                 <div className={styles.advantageImgContainer}>
                   <img src={card.img} alt={card.alt} className={styles.advantageImg} />
+                  <div className={styles.zoomHoverOverlay}>
+                    <ZoomIn size={24} className={styles.zoomIcon} />
+                  </div>
                 </div>
               </motion.div>
             ))}
